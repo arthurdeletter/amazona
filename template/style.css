@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+html{
+    font-size: 62.5%; /* 16px x 62.5 = 10px -> 1rem */
+    box-sizing: border-box;
+
+    --primary-dark: #203040;
+
+    --light-bg: #f8f8f8;
+
+    --a-hover: #ff8000;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: Roboto, sans-serif;
+}
+
+/* Basic Styling */
+.container{
+    width: 95%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--a-hover);
+}
+
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+h2{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+
+/* Layouot */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    background-color: var(--primary-dark);
+}
+
+main{
+    grid-area: main;
+    padding: 1rem;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--primary-dark);
+    color: #fff;
+}
+
+/* Header */
+header a{
+    color: #fff;
+    padding: 1rem;
+}
+
+a.brand{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer a{
+    color: var(--a-hover);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.center{
+    justify-content: center;
+}
+
+/* Images */
+img.medium{
+    width: 100%;
+    max-width: 29rem;
+}
+
+/* Card */
+.card{
+    background-color: var(--light-bg);
+    margin: 1rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    border: .1rem solid #c0c0c0;
+}
+.card-body{
+    padding: 1rem;
+}
+.card-body > *{
+    margin-bottom: .5rem;
+}
+.price{
+    font-size: 2rem;
+}
+
+/* Rating */
+.rating span{
+    color: #f0c040;
+    margin: .1rem;
+}
